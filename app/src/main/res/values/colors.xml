@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="black_variant">#252A31</color>
+    <color name="green">#00A597</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#2196F3</color>
+    <color name="red">#E11C53</color>
+    <color name="blue_variant">#006CFF</color>
+    <color name="dark_grey">#484848</color>
+    <color name="light_grey">#999999</color>
+    <color name="light_grey_2">#BEBEBE</color>
+    <color name="light_grey_3">#DDDDDD</color>
+    <color name="light_grey_4">#DADADA</color>
+    <color name="dark_yellow">#FDD015</color>
+    <color name="yellow">#FECB6E</color>
+    <color name="light_yellow">#FFF7EF</color>
+    <color name="pink">#FF6C81</color>
+    <color name="select_avatar_background_color">#FFF7EF</color>
+    <color name="light_pink">#FFD0D6</color>
+    <color name="light_pink_2">#FFE3E3</color>
+    <color name="white_tint">#FFFBFB</color>
+    <color name="hint_text_color">#999999</color>
+    <color name="purple_variant">#A259FF</color>
+    <color name="success_color">#00A597</color>
+    <color name="circular_progress_background_tint">#19000000</color>
+</resources>

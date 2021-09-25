@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ru.rambler.libs.swipe_layout.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    app:left_swipe_enabled="false"
+    app:right_swipe_enabled="true">
+
+<!--    CENTER. app:gravity="center" - is default value -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp">
+
+        <ImageView
+            android:id="@+id/checkState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_circle_checkbox_checked"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/todoText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/todoText"
+            android:layout_width="350dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:padding="27dp"
+            android:text=""
+            android:textColor="@color/black_variant"
+            android:textSize="@dimen/text_size_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/dividerLine"
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/light_grey_4"
+            app:layout_constraintBottom_toBottomOf="@+id/todoText"
+            app:layout_constraintEnd_toEndOf="@+id/todoText"
+            app:layout_constraintStart_toStartOf="@+id/todoText"
+            app:layout_constraintTop_toTopOf="@+id/todoText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--RIGHT-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bring_to_clamp="280dp"
+        app:clamp="self"
+        app:gravity="right"
+        app:sticky="180dp">
+
+
+        <ImageView
+            android:id="@+id/completeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="290dp"
+            android:src="@drawable/ic_complete_icon"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="120dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_delete_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--LEFT-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:bring_to_clamp="100dp"
+        app:clamp="self"
+        app:gravity="left"
+        app:sticky="none">
+
+    </FrameLayout>
+
+</ru.rambler.libs.swipe_layout.SwipeLayout>

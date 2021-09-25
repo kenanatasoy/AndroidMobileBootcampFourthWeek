@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable-v24/ic_circle_checkbox_outline_checked.xml" value="0.1537037037037037" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable-v24/ic_circle_checkbox_unchecked.xml" value="0.1537037037037037" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/custom_checkbox_selector.xml" value="0.1537037037037037" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/dialog_approve_button_background.xml" value="0.2171875" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/dialog_button_background.xml" value="0.2703125" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/dialog_decline_button_background.xml" value="0.2171875" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/edit_text_background.xml" value="0.134375" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_checkbox_unchecked.xml" value="0.1537037037037037" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_circle_checkbox_checked.xml" value="0.1537037037037037" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_circle_checkbox_unchecked.xml" value="0.2703125" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_complete_icon.xml" value="0.2703125" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_decky_logo.xml" value="0.16354166666666667" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_delete_icon.xml" value="0.2703125" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_fab_icon.xml" value="0.2703125" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_plus_icon.xml" value="0.21354166666666666" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/ic_tasker_logo.xml" value="0.16354166666666667" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/login_button_background.xml" value="0.134375" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/login_screen_background_gradient.xml" value="0.2703125" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/drawable/rounded_checkbox_corners.xml" value="0.2703125" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/activity_fab_tria.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/activity_splash.xml" value="0.152" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/item_todo.xml" value="0.2" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/item_todo_2.xml" value="0.19947916666666668" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/layout.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/AndroidMobileBootcampFourthWeek/app/src/main/res/layout/layout_dialog.xml" value="0.2" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
