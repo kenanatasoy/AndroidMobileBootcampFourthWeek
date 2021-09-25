@@ -1,6 +1,7 @@
 package com.example.androidmobilebootcampfourthweek.fragments
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -39,13 +40,10 @@ import retrofit2.Call
 class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
 
     private var todoList = ArrayList<Todo>()
-    private lateinit var todosAdapter : TodosAdapter
+    private var todosAdapter : TodosAdapter? = null
 
-    val limit = 10
+    var limit = 10
     var skip = 0
-    var scrollLimit: Int = 1
-    var scrollCount: Int = 0
-    var taskCount: Int = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -54,8 +52,6 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
 
         changeStatusBarColor(R.color.purple_700)
 
-//        getTaskCount()
-
         getDataByPagination(limit, skip)
 
         return inflater.inflate(R.layout.fragment_home, container, false)
@@ -63,28 +59,27 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
     }
 
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        when (taskCount){
-//            0 -> Log.d("task:", "0")
-//            else -> { getDataByPagination(limit, skip)
-//                scrollLimit = taskCount/limit }
-//        }
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        /*  when (taskCount){
+            0 -> Log.d("task:", "0")
+            else -> { getDataByPagination(limit, skip)
+                scrollLimit = taskCount/limit }
+        }*/
 
         floatingActionButton.setOnClickListener {
             showMaterialDialog()
         }
 
-
-
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
-                if (!recyclerView.canScrollVertically(1) && newState==RecyclerView.SCROLL_STATE_IDLE && scrollCount <= scrollLimit) {
-                    skip += limit
-                    scrollCount++
+                if (!recyclerView.canScrollVertically(1) && newState==RecyclerView.SCROLL_STATE_IDLE) {
+
+                    this@HomeFragment.skip += limit
                     progressBar.visibility = View.VISIBLE
                     getDataByPagination(limit, skip)
 
@@ -146,6 +141,8 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
             override fun onSuccess(getResponse: GetResponse) {
                 super.onSuccess(getResponse)
 
+//                recyclerView.clearOnScrollListeners()
+
                 progressBar.visibility = View.GONE
 
                 todoList.addAll(getResponse.data)
@@ -154,13 +151,15 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
                     noTaskMessage.visibility = View.VISIBLE
                 }
 
-//                todoList.reverse() // Optional
+                if (todosAdapter == null){
+                    todosAdapter = TodosAdapter(todoList, this@HomeFragment)
+                    recyclerView.adapter = todosAdapter
+                }
 
-                todosAdapter = TodosAdapter(todoList, this@HomeFragment)
+                else{
+                    recyclerView.adapter?.notifyDataSetChanged()
+                }
 
-                recyclerView.adapter = todosAdapter
-
-                recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
             }
 
@@ -196,6 +195,11 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
                     override fun onSuccess(data: Unit) {
                         Toast.makeText(requireActivity(), "Successfully added new task", Toast.LENGTH_SHORT).show()
 
+
+                        this@HomeFragment.skip = todoList.size
+//                        this@HomeFragment.skip = 0
+//                        this@HomeFragment.limit = 10
+//
                         getDataByPagination(limit, skip)
 
                     }
@@ -208,6 +212,7 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
 
                 Log.d("object", newTodo.description + " " + newTodo.completed.toString())
             }
+
             .negativeButton(R.string.dismiss)
 
 
@@ -266,7 +271,7 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
 
         clickedItem.completed = !clickedItem.completed
 
-        todosAdapter.notifyItemChanged(position)
+        todosAdapter?.notifyItemChanged(position)
 
         val completeBody = CompleteBody(clickedItem.completed)
 
@@ -306,7 +311,7 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
 
                 todoList.removeAt(position)
 
-                todosAdapter.notifyItemRemoved(position)
+                todosAdapter?.notifyItemRemoved(position)
 
                 Toast.makeText(requireContext(), "Task ${position + 1} is deleted", Toast.LENGTH_SHORT).show()
 
@@ -321,14 +326,7 @@ class HomeFragment : Fragment(), TodosAdapter.OnClickListener {
         })
     }
 
-    private fun scrollToLastPosition(){
-        recyclerView.scrollToPosition(todoList.size - 1)
-    }
-
 
 }
-
-
-
 
 

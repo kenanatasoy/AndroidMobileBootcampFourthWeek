@@ -1,6 +1,7 @@
 package com.example.androidmobilebootcampfourthweek.fragments
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.util.Patterns
@@ -17,8 +18,13 @@ import com.example.androidmobilebootcampfourthweek.utils.USER_TOKEN
 import kotlinx.android.synthetic.main.fragment_login.*
 import com.example.androidmobilebootcampfourthweek.base.BaseCallback
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.androidmobilebootcampfourthweek.MainActivity
+import com.example.androidmobilebootcampfourthweek.fragments.adapter.TodosAdapter
+import com.example.androidmobilebootcampfourthweek.responseModels.GetResponse
 import com.example.androidmobilebootcampfourthweek.responseModels.User
 import com.example.androidmobilebootcampfourthweek.utils.changeStatusBarColor
+import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
 
 /**
@@ -104,7 +110,5 @@ class LoginFragment : Fragment() {
         }?.apply()
 
     }
-
-
 
 }

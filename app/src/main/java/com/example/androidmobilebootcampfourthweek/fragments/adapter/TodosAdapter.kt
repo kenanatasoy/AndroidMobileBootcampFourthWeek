@@ -1,6 +1,5 @@
 package com.example.androidmobilebootcampfourthweek.fragments.adapter
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidmobilebootcampfourthweek.R
 import com.example.androidmobilebootcampfourthweek.responseModels.Todo
-import kotlinx.android.synthetic.main.item_todo.*
 import kotlinx.android.synthetic.main.item_todo.view.*
 
 
@@ -19,22 +17,22 @@ class TodosAdapter(
 ) : RecyclerView.Adapter<TodosAdapter.ViewHolder>() {
 
 
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+    inner class ViewHolder(itemView1: View) : RecyclerView.ViewHolder(itemView1),
         View.OnClickListener {
 
-        val checkState: ImageView = itemView.checkState
-        val todoText: TextView = itemView.todoText
-        val dividerLine: View = itemView.dividerLine
-        val deleteButton: ImageView = itemView.deleteButton
-        val completeButton: ImageView = itemView.completeButton
+        val checkState: ImageView = itemView1.checkState
+        val todoText: TextView = itemView1.todoText
+        val dividerLine: View = itemView1.dividerLine
+        val deleteButton: ImageView = itemView1.deleteButton
+        val completeButton: ImageView = itemView1.completeButton
 
 
         init {
-            itemView.completeButton.setOnClickListener(this)
+            itemView1.completeButton.setOnClickListener(this)
         }
 
         init {
-            itemView.deleteButton.setOnClickListener(this)
+            itemView1.deleteButton.setOnClickListener(this)
         }
 
 
@@ -55,12 +53,13 @@ class TodosAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(
+        val itemView1 = LayoutInflater.from(parent.context).inflate(
             R.layout.item_todo,
             parent, false
         )
 
-        return ViewHolder(itemView)
+
+        return ViewHolder(itemView1)
     }
 
 
