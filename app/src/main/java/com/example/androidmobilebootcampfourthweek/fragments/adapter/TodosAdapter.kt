@@ -17,22 +17,22 @@ class TodosAdapter(
 ) : RecyclerView.Adapter<TodosAdapter.ViewHolder>() {
 
 
-    inner class ViewHolder(itemView1: View) : RecyclerView.ViewHolder(itemView1),
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
 
-        val checkState: ImageView = itemView1.checkState
-        val todoText: TextView = itemView1.todoText
-        val dividerLine: View = itemView1.dividerLine
-        val deleteButton: ImageView = itemView1.deleteButton
-        val completeButton: ImageView = itemView1.completeButton
+        val checkState: ImageView = itemView.checkState
+        val todoText: TextView = itemView.todoText
+        val dividerLine: View = itemView.dividerLine
+        val deleteButton: ImageView = itemView.deleteButton
+        val completeButton: ImageView = itemView.completeButton
 
 
         init {
-            itemView1.completeButton.setOnClickListener(this)
+            itemView.completeButton.setOnClickListener(this)
         }
 
         init {
-            itemView1.deleteButton.setOnClickListener(this)
+            itemView.deleteButton.setOnClickListener(this)
         }
 
 
@@ -53,13 +53,13 @@ class TodosAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView1 = LayoutInflater.from(parent.context).inflate(
+        val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.item_todo,
             parent, false
         )
 
 
-        return ViewHolder(itemView1)
+        return ViewHolder(itemView)
     }
 
 
